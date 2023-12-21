@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "82gNlGJ70itBrc7nebEcwDm1i7w48nkeDk6xbaRx6Wr6Rw4PifTyjJaitJGQZqlkNSpD22GlSdiErGi9xwTiCA==",
+  "dgSpecHash": "wTge0A3yjicSYut27e04Zf7YiPUo13HTmxP5g1tIMXGexganjiX6gwNNifp9KAOjxDjEDyIljqYJTUmkQGm3Dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\abcha\\Desktop\\gitRepos\\Playground\\MagicVilla\\MagicVilla_VillaAPI\\MagicVilla\\MagicVilla_VillaAPI\\MagicVilla_VillaAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\abcha\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\abcha\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\abcha\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\abcha\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\abcha\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\abcha\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\abcha\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
