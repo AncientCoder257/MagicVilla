@@ -1,5 +1,4 @@
 using MagicVilla_VillaAPI.Data;
-using MagicVilla_VillaAPI.Models;
 using MagicVilla_VillaAPI.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +15,7 @@ public class VillaAPIController : ControllerBase
         return Ok(VillaStore.villaList);
     }
     
-    [HttpGet("GetVillas/{id}")]
+    [HttpGet("{id:int}", Name = "GetVilla")]
     [ProducesResponseType(typeof(VillaDTO), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -32,5 +31,29 @@ public class VillaAPIController : ControllerBase
             return NotFound();
         }
         return Ok(villa);
+    }
+
+    [HttpPost("CreateVilla")]
+    [ProducesResponseType(typeof(VillaDTO), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public ActionResult<VillaDTO> CreateVilla([FromBody]VillaDTO villaDTO)
+    {
+        if (villaDTO == null)
+        {
+            return BadRequest();
+        }
+
+        if (villaDTO.Id > 0)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError);
+        }
+
+        villaDTO.Id = VillaStore.villaList.Any()
+            ? VillaStore.villaList.MaxBy(v => v.Id)!.Id + 1 
+            : 1;
+        VillaStore.villaList.Add(villaDTO);
+
+        return CreatedAtRoute("GetVilla", new {id = villaDTO.Id},villaDTO);
     }
 }
