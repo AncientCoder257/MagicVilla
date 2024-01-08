@@ -1,0 +1,79 @@
+2024-01-08 20:35:12.393 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-01-08 20:35:12.533 +02:00 [DBG] Hosting starting
+2024-01-08 20:35:12.647 +02:00 [DBG] Loaded hosting startup assembly MagicVilla_VillaAPI
+2024-01-08 20:35:12.648 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-08 20:35:12.660 +02:00 [INF] Hosting environment: Development
+2024-01-08 20:35:12.660 +02:00 [INF] Content root path: C:\Users\abcha\Desktop\gitRepos\Playground\MagicVilla\MagicVilla_VillaAPI\MagicVilla\MagicVilla_VillaAPI
+2024-01-08 20:35:12.660 +02:00 [DBG] Hosting started
+2024-01-08 20:35:12.733 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger - null null
+2024-01-08 20:35:12.739 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-01-08 20:35:12.756 +02:00 [DBG] No candidates found for the request path '/swagger'
+2024-01-08 20:35:12.757 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:12.807 +02:00 [DBG] Connection ID "18374686497656799233" disconnecting.
+2024-01-08 20:35:12.807 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger/index.html - null null
+2024-01-08 20:35:12.807 +02:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-01-08 20:35:12.807 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:12.829 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger - 301 null null 100.6589ms
+2024-01-08 20:35:12.916 +02:00 [DBG] Connection ID "18302628895028936715" disconnecting.
+2024-01-08 20:35:12.916 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger/index.html - 200 null text/html;charset=utf-8 109.4959ms
+2024-01-08 20:35:12.936 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger/swagger-ui-bundle.js - null null
+2024-01-08 20:35:12.936 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger/swagger-ui.css - null null
+2024-01-08 20:35:12.936 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger/swagger-ui-standalone-preset.js - null null
+2024-01-08 20:35:12.936 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2024-01-08 20:35:12.936 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:12.936 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2024-01-08 20:35:12.936 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2024-01-08 20:35:12.936 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:12.936 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:13.001 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-01-08 20:35:13.001 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-01-08 20:35:13.001 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-01-08 20:35:13.002 +02:00 [DBG] Connection ID "18158513698363146250" disconnecting.
+2024-01-08 20:35:13.012 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger/swagger-ui.css - 200 143943 text/css 75.7085ms
+2024-01-08 20:35:13.031 +02:00 [DBG] Connection ID "18302628895028936717" disconnecting.
+2024-01-08 20:35:13.033 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 97.7174ms
+2024-01-08 20:35:13.036 +02:00 [DBG] Connection ID "18086456104325218307" disconnecting.
+2024-01-08 20:35:13.036 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 103.4851ms
+2024-01-08 20:35:13.398 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger/v1/swagger.json - null null
+2024-01-08 20:35:13.398 +02:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-01-08 20:35:13.399 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:13.426 +02:00 [INF] Request starting HTTP/2 GET https://localhost:44395/swagger/favicon-32x32.png - null null
+2024-01-08 20:35:13.426 +02:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2024-01-08 20:35:13.426 +02:00 [DBG] Request did not match any endpoints
+2024-01-08 20:35:13.427 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-01-08 20:35:13.428 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger/favicon-32x32.png - 200 628 image/png 1.4929ms
+2024-01-08 20:35:13.535 +02:00 [INF] Request finished HTTP/2 GET https://localhost:44395/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 137.1055ms
+2024-01-08 20:35:13.535 +02:00 [DBG] Connection ID "18302628890733969414" disconnecting.
+2024-01-08 21:39:47.286 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-01-08 21:39:47.658 +02:00 [DBG] Entity Framework Core 8.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.0' with options: None
+2024-01-08 21:39:50.737 +02:00 [DBG] 'ApplicationDbContext' disposed.
+2024-01-08 21:42:58.611 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-01-08 21:42:59.030 +02:00 [DBG] Entity Framework Core 8.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.0' with options: None
+2024-01-08 21:42:59.042 +02:00 [DBG] Creating DbConnection.
+2024-01-08 21:42:59.377 +02:00 [DBG] Created DbConnection. (332ms).
+2024-01-08 21:42:59.379 +02:00 [DBG] Migrating using database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:42:59.383 +02:00 [DBG] Opening connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:42:59.696 +02:00 [DBG] An error occurred using the connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:42:59.701 +02:00 [DBG] 'ApplicationDbContext' disposed.
+2024-01-08 21:42:59.704 +02:00 [DBG] Disposing connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:42:59.709 +02:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-01-08 21:44:12.114 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-01-08 21:44:12.447 +02:00 [DBG] Entity Framework Core 8.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.0' with options: None
+2024-01-08 21:44:12.457 +02:00 [DBG] Creating DbConnection.
+2024-01-08 21:44:12.470 +02:00 [DBG] Created DbConnection. (10ms).
+2024-01-08 21:44:12.472 +02:00 [DBG] Migrating using database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:44:12.475 +02:00 [DBG] Opening connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:44:12.515 +02:00 [DBG] An error occurred using the connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:44:12.519 +02:00 [DBG] 'ApplicationDbContext' disposed.
+2024-01-08 21:44:12.520 +02:00 [DBG] Disposing connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:44:12.523 +02:00 [DBG] Disposed connection to database '' on server '' (0ms).
+2024-01-08 21:46:40.854 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-01-08 21:46:41.256 +02:00 [DBG] Entity Framework Core 8.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.0' with options: None
+2024-01-08 21:46:41.267 +02:00 [DBG] Creating DbConnection.
+2024-01-08 21:46:41.284 +02:00 [DBG] Created DbConnection. (14ms).
+2024-01-08 21:46:41.286 +02:00 [DBG] Migrating using database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:46:41.290 +02:00 [DBG] Opening connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:46:41.334 +02:00 [DBG] An error occurred using the connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:46:41.337 +02:00 [DBG] 'ApplicationDbContext' disposed.
+2024-01-08 21:46:41.339 +02:00 [DBG] Disposing connection to database 'MagicVilla' on server 'ABDULC\SQLEXPRESS'.
+2024-01-08 21:46:41.342 +02:00 [DBG] Disposed connection to database '' on server '' (0ms).
