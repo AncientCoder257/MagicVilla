@@ -1,4 +1,5 @@
 
+using MagicVilla_VillaAPI;
 using MagicVilla_VillaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
@@ -20,6 +21,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
             .GetConnectionString("DefaultSQLConnection")
     );
 });
+
+builder.Services.AddAutoMapper(typeof(MappingConfig));
 
 builder.Services.AddControllers().AddNewtonsoftJson();
 // Add services to the container.
