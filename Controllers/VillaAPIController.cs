@@ -50,7 +50,7 @@ public class VillaAPIController : ControllerBase
     [ProducesResponseType(typeof(VillaDTO), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    public ActionResult<VillaDTO> CreateVilla([FromBody]VillaDTO? villaDTO)
+    public ActionResult<VillaDTO> CreateVilla([FromBody]VillaCreateDto? villaDTO)
     {
         var villaName = _db.Villas?
             .FirstOrDefault(v => v.Name.ToLower() == villaDTO.Name.ToLower());
@@ -64,14 +64,13 @@ public class VillaAPIController : ControllerBase
             return BadRequest();
         }
 
-        if (villaDTO.Id > 0)
+        /*if (villaDTO.Id > 0)
         {
             return StatusCode(StatusCodes.Status500InternalServerError);
-        }
+        }*/
         
         Villa model = new ()
         {
-            Id = villaDTO.Id,
             Name = villaDTO.Name,
             Details = villaDTO.Details,
             Rate = villaDTO.Rate,
@@ -83,7 +82,7 @@ public class VillaAPIController : ControllerBase
         _db.Villas.Add(model);
         _db.SaveChanges();
 
-        return CreatedAtRoute("GetVilla", new {id = villaDTO.Id},villaDTO);
+        return CreatedAtRoute("GetVilla", new {id = model.Id},model);
     }
 
     [HttpDelete("{id:int}", Name = "DeleteVilla")]
@@ -112,7 +111,7 @@ public class VillaAPIController : ControllerBase
     [HttpPut]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public IActionResult UpdateVilla(int id, [FromBody] VillaDTO? villaDto)
+    public IActionResult UpdateVilla(int id, [FromBody] VillaUpdateDto? villaDto)
     {
         if (villaDto == null || id != villaDto.Id)
         {
@@ -139,7 +138,7 @@ public class VillaAPIController : ControllerBase
     [HttpPatch("{id:int}", Name = "UpdatePartialVilla")]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public IActionResult UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO>? patchDto)
+    public IActionResult UpdatePartialVilla(int id, JsonPatchDocument<VillaUpdateDto>? patchDto)
     {
         //https://jsonpatch.com/ 
         //https://learn.microsoft.com/en-us/aspnet/core/web-api/jsonpatch?view=aspnetcore-8.0
@@ -152,7 +151,7 @@ public class VillaAPIController : ControllerBase
             .AsNoTracking()
             .FirstOrDefault(v => v.Id == id);
         
-        VillaDTO villaDto = new ()
+        VillaUpdateDto villaDto = new ()
         {
             Id = villa.Id,
             Name = villa.Name,

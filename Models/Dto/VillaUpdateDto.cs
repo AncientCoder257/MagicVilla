@@ -2,8 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MagicVilla_VillaAPI.Models.Dto;
 
-public class VillaDTO
+public class VillaUpdateDto
 {
+    [Required]
     public int Id { get; set; }
     [Required]
     [MaxLength(30)]
@@ -11,8 +12,11 @@ public class VillaDTO
     public string? Details { get; set; }
     [Required]
     public double Rate { get; set; }
+    [Required]
     public int Sqm { get; set; }
+    [Required]
     public int Occupancy { get; set; }
+    [Required]
     public string? ImageUrl { get; set; }
     public string? Amenity { get; set; }
 }
