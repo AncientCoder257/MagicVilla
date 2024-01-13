@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MagicVilla_VillaAPI.Models.Dto;
 
-public class VillaDTO
+public class VillaDto
 {
     public int Id { get; set; }
     [Required]
