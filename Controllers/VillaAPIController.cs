@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MagicVilla_VillaAPI.Controllers;
 
-[Route("[controller]")]
+[Route("api/VillaApi")]
 [ApiController]
 public class VillaAPIController : ControllerBase
 {
