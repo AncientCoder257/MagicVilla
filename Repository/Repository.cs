@@ -13,10 +13,11 @@ public class Repository<T> : IRepository<T> where T : class
     public Repository(ApplicationDbContext dbContext)
     {
         _dbContext = dbContext;
+        //_dbContext.VillaNumbers.Include(v => v.Villa).ToList();
         this.dbSet = _dbContext.Set<T>();
     }
     
-    public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null)
+    public async Task<List<T>> GetAllAsync(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
     {
         IQueryable<T>? query = dbSet;
 
@@ -25,10 +26,18 @@ public class Repository<T> : IRepository<T> where T : class
             query = query?.Where(filter);
         }
 
+        if (includeProperties != null)
+        {
+            foreach (var includeProp in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+            {
+                query = query.Include(includeProp);
+            }
+        }
+
         return await query.ToListAsync();
     }
 
-    public async Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true)
+    public async Task<T> GetAsync(Expression<Func<T, bool>>? filter = null, bool tracked = true, string? includeProperties = null)
     {
         IQueryable<T>? query = dbSet;
 
@@ -40,6 +49,8 @@ public class Repository<T> : IRepository<T> where T : class
         {
             query = query?.Where(filter);
         }
+        
+        
 
         return await query.FirstOrDefaultAsync();
     }
