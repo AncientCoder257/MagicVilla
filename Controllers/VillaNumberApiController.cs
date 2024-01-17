@@ -95,7 +95,7 @@ public class VillaNumberApiController : ControllerBase
                 .GetAsync(v => v.VillaNo == createDto.VillaNo);
             if (villaNumberExist != null)
             {
-                ModelState.AddModelError("", "Villa Number already Exists!");
+                ModelState.AddModelError("ErrorMessages", "Villa Number already Exists!");
                 return BadRequest(ModelState);
             }
 
@@ -103,7 +103,7 @@ public class VillaNumberApiController : ControllerBase
                 .GetAsync(v => v.Id == createDto.VillaId);
             if (villa == null)
             {
-                ModelState.AddModelError("Invalid Id", "Villa Id is Invalid!");
+                ModelState.AddModelError("ErrorMessages", "Villa Id is Invalid!");
                 return BadRequest(ModelState);
             }
             
@@ -181,7 +181,7 @@ public class VillaNumberApiController : ControllerBase
                 .GetAsync(v => v.Id == updateDto.VillaId);
             if (villa == null)
             {
-                ModelState.AddModelError("Invalid Id", "Villa Id is Invalid!");
+                ModelState.AddModelError("ErrorMessages", "Villa Id is Invalid!");
                 return BadRequest(ModelState);
             }
 
